@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Titre</title>
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="referrer" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="">
+    <meta charset="utf-8">
+    <title>Miniprojet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+<header>
+    <h1>Super Calculator from Valmonzo de la Vega</h1>
+</header>
+<main>
+    <section>
+        <h2>
+        <?php if(empty($result)){
+        echo "Veuillez saisir une opération";
+        }
+        else{
+        echo $result;
+        }?>
+        </h2>
+        <form action="index.php" method="post">
+            <fieldset>
+                <label for="nb-1">Premier nombre</label>
+                <input type="text" name="nb-1"/>
+            </fieldset>
+            <fieldset>
+                <label for="nb-2">Deuxième nombre</label>
+                <input type="text" name="nb-2"/>
+            </fieldset>
+            <select name="operator">
+                <option value="+">Choisir une opération</option>
+                <option value="+">Addition</option>
+                <option value="-">Soustraction</option>
+                <option value="/">Division</option>
+                <option value="*">Multiplication</option>
+                <option value="%">Modulo</option>
+                <option value="**">Puissance</option>
+                <option value="fact">Factorielle</option>
+            </select>
+            <fieldset>
+                <select name="aire">
+                    <option value="">Calculer l'aire d'une forme</option>
+                    <option value="rectangle">Surface d'un rectangle</option>
+                    <option value="triangleRectangle">Surface d'un triangle rectangle</option>
+                    <option value="triangleNormal">Surface d'un triangle normal</option>
+                    <option value="cercle">Surface d'un cercle</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Valider"/>
+        </form>
+    </section>
+</main>
+<footer></footer>
+</body>
+</html>
